@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    color: #333;
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+input {
+    font-family: inherit;
+    border-radius: 4px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 1px 4px rgba(74, 144, 226, 0.3);
+}
+
+button {
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    background-color: #4a90e2;
+    font-family: inherit;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #3a80d2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#divid {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#bodyid {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input, button {
+        width: 100%;
+        max-width: none;
+    }
+    
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
