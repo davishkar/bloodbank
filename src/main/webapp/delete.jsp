@@ -58,7 +58,8 @@
     }
     
     input[type="submit"], 
-    input[type="reset"] {
+    input[type="reset"],
+    button {
         background-color: #3498db;
         color: white;
         border: none;
@@ -71,7 +72,8 @@
     }
     
     input[type="submit"]:hover, 
-    input[type="reset"]:hover {
+    input[type="reset"]:hover,
+    button:hover {
         background-color: #2980b9;
     }
     
@@ -81,6 +83,14 @@
     
     input[type="reset"]:hover {
         background-color: #c0392b;
+    }
+    
+    .print-button {
+        background-color: #f39c12;
+    }
+    
+    .print-button:hover {
+        background-color: #d35400;
     }
     
     table {
@@ -146,7 +156,29 @@
         border-radius: 4px;
         margin: 10px 0;
     }
+    
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .table-container, .table-container * {
+            visibility: visible;
+        }
+        .table-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .no-print {
+            display: none;
+        }
+    }
 </style>
+<script>
+    function printTable() {
+        window.print();
+    }
+</script>
 </head>
 <body>
 <div class="container">
@@ -231,6 +263,9 @@
     
     <div class="table-container">
         <div class="form-title">Table: <%= tablename %></div>
+        <div class="no-print">
+            <button type="button" class="print-button" onclick="printTable()">Print Table</button>
+        </div>
         <table>
             <thead>
                 <tr>
